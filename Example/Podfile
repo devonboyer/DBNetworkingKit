@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'DBNetworkingKit', :exclusive => true do
+  pod "DBNetworkingKit", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "DBNetworkingKit", :path => "../"
+
+  
+end
