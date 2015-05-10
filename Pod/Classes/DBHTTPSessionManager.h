@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Devon Boyer. All rights reserved.
 //
 
-#import "DBURLSessionManager.h"
+#import <DBNetworkingKit/DBURLSessionManager.h>
 
 /*!
  @class DBHTTPSessionManager

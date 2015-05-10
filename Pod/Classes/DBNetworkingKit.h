@@ -16,13 +16,13 @@
 #import <Foundation/Foundation.h>
 #endif
 
-#import "DBURLRequestSerialization.h"
-#import "DBURLResponseSerialization.h"
-#import "DBNetworkReachabilityManager.h"
-#import "DBURLSessionManager.h"
-#import "DBHTTPSessionManager.h"
-#import "DBURLParameterEncoding.h"
-#import "DBJSONParser.h"
-#import "DBError.h"
+#import <DBNetworkingKit/DBURLRequestSerialization.h>
+#import <DBNetworkingKit/DBURLResponseSerialization.h>
+#import <DBNetworkingKit/DBNetworkReachabilityManager.h>
+#import <DBNetworkingKit/DBURLSessionManager.h>
+#import <DBNetworkingKit/DBHTTPSessionManager.h>
+#import <DBNetworkingKit/DBURLParameterEncoding.h>
+#import <DBNetworkingKit/DBJSONParser.h>
+#import <DBNetworkingKit/DBError.h>
 
 #define DBNetworkingKitVersion @"1.0.1"

@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import "DBURLRequestSerialization.h"
-#import "DBURLResponseSerialization.h"
-#import "DBNetworkReachabilityManager.h"
+#import <DBNetworkingKit/DBURLRequestSerialization.h>
+#import <DBNetworkingKit/DBURLResponseSerialization.h>
+#import <DBNetworkingKit/DBNetworkReachabilityManager.h>
 
 /*!
  @class DBURLSessionManager
