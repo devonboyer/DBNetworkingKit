@@ -117,18 +117,31 @@
 - (NSMutableURLRequest *)requestWithMethod:(NSString *)method
                                        URL:(NSURL *)URL
                                 parameters:(id)parameters
-                                     error:(NSError **)error
+                                     error:(NSError *__autoreleasing *)error
 {
-    NSMutableURLRequest *mutableRequest = [[NSMutableURLRequest alloc] initWithURL:URL];
+    NSParameterAssert(method);
+
+    NSMutableURLRequest *mutableRequest = [NSMutableURLRequest requestWithURL:URL];
     mutableRequest.HTTPMethod = method;
     mutableRequest = [[self requestBySerializingRequest:mutableRequest withParameters:parameters error:error] mutableCopy];
     
     return mutableRequest;
 }
 
+- (NSMutableURLRequest *)multipartFormRequestWithMethod:(NSString *)method
+                                                    URL:(NSURL *)URL
+                              constructingBodyWithBlock:(void (^)(id<DBMultipartFormData>formData))block
+                                                  error:(NSError **)error
+{
+    NSParameterAssert(method);
+    NSParameterAssert(![method isEqualToString:@"GET"] || ![method isEqualToString:@"HEAD"]);
+    
+    return nil;
+}
+
 - (NSURLRequest *)requestBySerializingRequest:(NSURLRequest *)request
                                withParameters:(id)parameters
-                                        error:(NSError **)error
+                                        error:(NSError *__autoreleasing *)error
 {
     NSParameterAssert(request);
     

@@ -40,7 +40,7 @@ static NSString * const DBCharactersToBeEscapedInQueryString = @":/?&=;+!@#$()',
     NSMutableArray *mutablePairs = [NSMutableArray array];
     [parameters enumerateKeysAndObjectsUsingBlock:^(id key, id value, BOOL *stop) {
         DBQueryStringPair *pair = [[DBQueryStringPair alloc] initWithField:key value:value];
-        [mutablePairs addObject:[pair URLEncodedStringValueWithEncoding:NSUTF8StringEncoding]];
+        [mutablePairs addObject:[pair URLEncodedStringValueWithEncoding:encoding]];
     }];
     
     NSString *queryString = [mutablePairs componentsJoinedByString:@"&"];

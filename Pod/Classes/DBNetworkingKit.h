@@ -25,4 +25,4 @@
 #import <DBNetworkingKit/DBJSONParser.h>
 #import <DBNetworkingKit/DBError.h>
 
-#define DBNetworkingKitVersion @"1.0.1"
+#define DBNetworkingKitVersion @"1.0.2"
